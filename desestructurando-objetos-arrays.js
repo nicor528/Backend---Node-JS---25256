@@ -60,8 +60,5 @@ console.log(todosNumeros); // [1, 2, 3, 4, 5, 6]
 const copiaNumeros = [...numeros1];
 console.log(copiaNumeros); // [1, 2, 3]
 
-const copiaNumeros2 = numeros1
-console.log(copiaNumeros2)
-copiaNumeros2.push(8)
-console.log(numeros1)
+
 

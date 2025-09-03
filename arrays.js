@@ -34,7 +34,7 @@ console.log(frutasLargas);
 // Concatenar frutas y verduras en un solo string
 const todos = frutas.concat(verduras);
 const listaReducida = todos.reduce((acum, item) => acum + " | " + item);
-console.log(listaReducida); 
+console.log(listaReducida);
 
 /*
 ITERACIÓN CON ARRAYS

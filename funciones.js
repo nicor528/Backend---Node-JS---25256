@@ -35,7 +35,7 @@ Higher Order Functions (HOF)
 O CALLBACKS
 */
 
-function calculadora(a,b,operacion){
+function calculadora(a ,b , operacion) {
     return operacion(a,b)
 }
 
