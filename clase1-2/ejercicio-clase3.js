@@ -6,6 +6,7 @@ const IVAs = precios.map(precio => precio*IVA)
 console.log(IVAs)
 
 const precio_conIVA = precios.map(precio => precio * 1.21)
+
 precio_conIVA.forEach((precio) => {
     console.log(`El precio es: ${precio.toFixed(2)}.- IVA incluido.`)
 })

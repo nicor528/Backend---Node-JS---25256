@@ -1,0 +1,32 @@
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto Node.js de ejemplo con scripts útiles",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "clean": "rm -rf dist",
+    "prestart": "echo 'Preparando el entorno...'",
+    "poststart": "echo '🚀 Servidor iniciado correctamente!'",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "webpack": "^5.88.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.11"
+  }
+}
