@@ -1,0 +1,6 @@
+nombre,apellido,edad,mail,contraseña
+Juan,Pérez,25,juanperez@mail.com,abc123
+Ana,Gómez,30,ana.gomez@mail.com,pass456
+Luis,Fernandez,28,luisf@mail.com,qwerty
+Maria,López,22,maria.lopez@mail.com,123456
+Pedro,Ramirez,35,pedro.r@mail.com,password
