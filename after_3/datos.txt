@@ -1,4 +1,4 @@
-nombre,apellido,edad,mail,contraseña
+nombre,apellido,edad,mail,clave
 Juan,Pérez,25,juanperez@mail.com,abc123
 Ana,Gómez,30,ana.gomez@mail.com,pass456
 Luis,Fernandez,28,luisf@mail.com,qwerty

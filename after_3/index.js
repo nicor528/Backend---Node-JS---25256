@@ -33,5 +33,8 @@ fs.readFile(filePath, "utf8", (error, data) => {
         })
 
         console.log(usuarios)
+        //const datos2 = usuarios.split(",").map (d => d.trim());
+        //console.log("Solucion de flor: ", datos2)
+
     }
 })
