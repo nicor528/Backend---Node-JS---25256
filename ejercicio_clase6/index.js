@@ -1,8 +1,21 @@
-/*fetch("https://rickandmortyapi.com/api/character", {
-    method: "GET",
-    headers: {
-        "Content-Type" : "application/json"
-    }
+/*
+fetch("https://rickandmortyapi.com/api/character", {
+    method: "GET"
+}).then(async (response) => {
+    const data = await response.json()
+    //console.log(data)
+    data.results.slice(0,5).map(personaje => {
+        console.log(personaje.name)
+    })
+}).catch(error => {
+    console.log(error)
+}).finally(() => {
+    console.log("Programa terminado")
+})*/
+
+/*
+fetch("https://rickandmortyapi.com/api/character", {
+    method: "GET"
 }).then( async (response) => {
     const data = await response.json()
     //console.log(data)
@@ -17,7 +30,7 @@
     console.log("proceso terminado")
 })*/
 
-async function ejercicio6 (){
+async function obtenerPersonajes (){
     try{
         console.log("TEST2")
         const response = await fetch("https://rickandmortyapi.com/api/character",{"method": "GET"})
@@ -33,5 +46,5 @@ async function ejercicio6 (){
     }
 }
 
-ejercicio6()
+obtenerPersonajes()
 console.log("TEST1")
