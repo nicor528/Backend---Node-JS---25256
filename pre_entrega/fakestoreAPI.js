@@ -51,7 +51,7 @@ export async function eliminarProducto(id) {
             method: "DELETE"
         })
         const data = await response.json()
-        console.log("dentro de eliminar", data)
+        console.log("Producto eliminado con exito", data)
     }catch(error){
         console.log(error)
     }
