@@ -1,5 +1,5 @@
 {
-  "name": "ejercicio-10-11",
+  "name": "test1-auth0",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-openid-connect": "^2.19.2"
   }
 }
