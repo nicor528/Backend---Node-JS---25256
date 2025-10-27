@@ -15,12 +15,13 @@ const corsConfig = {
 }
 
 app.use(cors(corsConfig))
-app.use("/api", rutasProductos)
 
 app.use((req, res, next) => {
     console.log(`Datos received at:  ${req.method} ${req.url}`);
     next();
 });
+
+app.use("/api", rutasProductos)
 
 app.use((req, res, next) => {
     res.status(404).send('Recurso no encontrado o ruta inválida');
