@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "437229d7-2508-484c-9268-7730f4060f90",
+		"name": "talento back node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30023114",
+		"_collection_link": "https://interstellar-astronaut-417542.postman.co/workspace/2d611acb-bf80-4a6b-8497-bc70c3f71c62/collection/30023114-437229d7-2508-484c-9268-7730f4060f90?action=share&source=collection_link&creator=30023114"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "obtener todos los productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_local}}api/products",
+							"host": [
+								"{{url_local}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HTML",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_local}}HTML",
+					"host": [
+						"{{url_local}}HTML"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "item/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_local}}item/10",
+					"host": [
+						"{{url_local}}item"
+					],
+					"path": [
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "items?query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_local}}items?category=bebida&price=100",
+					"host": [
+						"{{url_local}}items"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "bebida"
+						},
+						{
+							"key": "price",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ejemplo de 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_local}}error404",
+					"host": [
+						"{{url_local}}error404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_local}}JSON",
+					"host": [
+						"{{url_local}}JSON"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

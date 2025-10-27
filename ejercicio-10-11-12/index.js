@@ -18,8 +18,6 @@ const corsConfig = {
 
 app.use(cors(corsConfig));
 
-
-
 app.use((req, res, next) => {
     console.log(`Datos received at:  ${req.method} ${req.url}`);
     /*res.header('Access-Control-Allow-Origin', 'https://example.com');
