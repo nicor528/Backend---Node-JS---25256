@@ -10,5 +10,7 @@ routes.get("/products", getAllProducts)
 
 routes.get("/products/:id", getProductById)
 
+//routes.post("/products", )
+
 
 export default routes;
