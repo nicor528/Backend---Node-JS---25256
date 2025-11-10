@@ -14,6 +14,10 @@ const corsConfig = {
     optionsSuccessStatus: 204                                   // respuesta preflight exitosa
 }
 
+const objeto = {
+    clave : "valor"
+}
+
 app.use(cors(corsConfig))
 
 app.use((req, res, next) => {
