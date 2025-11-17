@@ -1,8 +1,11 @@
 import express from "express"
 import cors from "cors"
 import rutasProductos from "./src/routes/products.routes.js"
+import rutasLog from "./src/routes/auth.routes.js"
+import { authentication } from "./src/middleware/authentication.js"
 
 const app = express()
+
 const PORT = process.env.PORT || 3000;
 const corsConfig = {
     origin: ['http://localhost:3000', 'https://midominio.com'], // dominios permitidos
@@ -19,6 +22,10 @@ const objeto = {
 }
 
 app.use(cors(corsConfig))
+app.use(express.json());
+
+app.use("/api", rutasLog)
+app.use(authentication);
 
 app.use((req, res, next) => {
     console.log(`Datos received at:  ${req.method} ${req.url}`);
@@ -26,6 +33,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", rutasProductos)
+
 
 app.use((req, res, next) => {
     res.status(404).send('Recurso no encontrado o ruta inválida');

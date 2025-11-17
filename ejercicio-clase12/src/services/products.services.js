@@ -3,18 +3,31 @@
   { id: 2, name: 'Producto 2', price: 2000 },
 ];*/
 
-import {
-  obtenerProductos
-} from "../models/products.models.js"
+import {obtenerProducto, obtenerProductos} from "../models/products.models.js"
 
 export const getAllProductsService = async () => {
-  console.log("test2 dentro de servicio")
-  const products = await obtenerProductos()
-  return products;
+  return(
+    new Promise(async (res,rej)=> {
+      console.log("test2 dentro de servicio")
+      try{
+        const productos = await obtenerProductos()
+        res(productos);
+      }catch(error){
+        rej()
+      }
+    })
+  )
 };
 
 export const getProductByIdService = async (id) => {
-    const products = await obtenerProductos()
-    console.log("buscando error ", products)
-    return products.find(product => product.id == id);
+  return(
+    new Promise(async(res, rej) => {
+      try{
+        const product = await obtenerProducto(id)
+        res(product)
+      }catch(error){
+        rej(error)
+      }
+    })
+  )
 };
