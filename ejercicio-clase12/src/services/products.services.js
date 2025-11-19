@@ -3,7 +3,49 @@
   { id: 2, name: 'Producto 2', price: 2000 },
 ];*/
 
-import {obtenerProducto, obtenerProductos} from "../models/products.models.js"
+import {actualizarProducto, agregarProducto, eliminarProducto, obtenerProducto, obtenerProductos} from "../models/products.models.js";
+
+export const addProductService = async (product) => {
+  return(
+    new Promise(async (res, rej) => {
+      try{
+        const newProduct = await agregarProducto(product)
+        res(newProduct)
+      }catch(error){
+        rej(error)
+      }
+    })
+  )
+
+}
+
+export const deleteProductService = async (id) => {
+  console.log(id)
+  return(
+    new Promise(async (res, rej) => {
+      try{
+        await eliminarProducto(id)
+        console.log("despues de eliminar el producto")
+        res()
+      }catch(error){
+        rej(error)
+      }
+    })
+  )
+}
+
+export const editProductService = async (id, product) => {
+  return(
+    new Promise(async (res, rej) => {
+      try{
+        const newProduct = await actualizarProducto(id, product)
+        res(newProduct)
+      }catch(error){
+        rej(error)
+      }
+    })
+  )
+}
 
 export const getAllProductsService = async () => {
   return(

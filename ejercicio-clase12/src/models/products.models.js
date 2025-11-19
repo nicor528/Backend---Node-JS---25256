@@ -67,15 +67,15 @@ export function agregarProducto(producto){
 
 //agregarProducto({nombre: "yerba", categoria: "infusion", precio: 200})
 
-export function actualizarProducto(producto){
+export function actualizarProducto(id, producto){
   return(
     new Promise(async (res, rej) => {
       try{
-        await updateDoc(doc(db, "products", producto.id), {
-          precio: producto.precio
+        await updateDoc(doc(db, "products", id), {
+          ...producto
         })
         console.log("producto actualizado")
-        res()
+        res({})
       }catch(error){
         console.log(error)
         rej(error)
